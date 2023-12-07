@@ -1,7 +1,7 @@
 import React from "react"
 import { Store } from "../definitions/common";
 
-export const useStore = <T extends unknown>(store: Store<T>) => {
+export const useParaply = <T extends unknown>(store: Store<T>) => {
     const [state, setState] = React.useState(store.getState());
   
     React.useEffect(() => {
