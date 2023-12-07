@@ -2,14 +2,14 @@
   "name": "paraply",
   "version": "0.0.1",
   "description": "A tiny store for everyday life",
-  "main": "index.ts",
+  "main": "dist/index.mjs",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsup",
     "build:tsc": "tsc",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
     "@types/react": "^18.2.42",
     "tsup": "^8.0.1",
@@ -18,5 +18,23 @@
   "peerDependencies": {
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/syntax-punk/paraply.git"
+  },
+  "keywords": [
+    "react",
+    "state",
+    "manager",
+    "management",
+    "redux",
+    "store"
+  ],
+  "bugs": {
+    "url": "https://github.com/syntax-punk/paraply/issues"
+  },
+  "homepage": "https://github.com/syntax-punk/paraply",
+  "author": "syntaxpunk",
+  "license": "MIT"
 }
