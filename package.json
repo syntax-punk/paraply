@@ -1,6 +1,6 @@
 {
   "name": "paraply",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A tiny store for everyday life",
   "main": "dist/index.mjs",
   "module": "dist/index.mjs",
