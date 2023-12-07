@@ -1,0 +1,1 @@
+export { createParaply } from './src/store';

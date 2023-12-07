@@ -1,10 +1,9 @@
 import { ActionFunction, Store } from "./definitions/common";
 
-
-export const createStore = <T extends unknown>(initialState: T): Store<T> => {
+export const createParaply = <T extends unknown>(initialState: T): Store<T> => {
   let state = initialState;
 
-  const callbacks = new Set<() => void>();
+  const subscriptions = new Set<() => void>();
   const getState = () => state;
 
   const setState = (nextState: T | ActionFunction<T>) => {
@@ -13,13 +12,13 @@ export const createStore = <T extends unknown>(initialState: T): Store<T> => {
         ? (nextState as ActionFunction<T>)(state)
         : nextState;
 
-    callbacks.forEach((callback) => callback());
+    subscriptions.forEach((callback) => callback());
   };
 
   const subscribe = (callback: () => void) => {
-    callbacks.add(callback);
+    subscriptions.add(callback);
     return () => {
-      callbacks.delete(callback);
+      subscriptions.delete(callback);
     };
   };
 
