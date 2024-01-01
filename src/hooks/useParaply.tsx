@@ -1,10 +1,10 @@
-import React from "react"
+import { useEffect, useState } from "react"
 import { Store } from "../definitions/common";
 
 export const useParaply = <T extends unknown>(store: Store<T>) => {
-    const [state, setState] = React.useState(store.getState());
+    const [state, setState] = useState(store.getState());
   
-    React.useEffect(() => {
+    useEffect(() => {
 
         const unsubscribe = store.subscribe(() => {
             setState(store.getState());
