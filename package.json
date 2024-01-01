@@ -36,5 +36,8 @@
   },
   "homepage": "https://github.com/syntax-punk/paraply",
   "author": "syntaxpunk",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "use-sync-external-store": "^1.2.0"
+  }
 }
